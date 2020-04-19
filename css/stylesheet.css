@@ -15,6 +15,13 @@
 }
 
 /* Keep pointer with JS scrolling links */
-.nav-link, .navbar-brand {
+.nav-link, .navbar-brand, .scroll-link {
     cursor: pointer;
 }
+
+.carousel-control-circle
+  {
+    border-radius: 50%;
+    width: 2em;
+    height: 2em; 
+  }
