@@ -13,7 +13,12 @@
     
     <script>
     function scrollToId(id) {
-        document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+        
+        window.scrollTo({
+            top: document.getElementById(id).offsetTop - document.getElementById('navbar').offsetHeight,
+            left: 0,
+            behavior: 'smooth'
+        });
     }
     </script>
 
@@ -34,8 +39,6 @@
         font-size: 3.5rem;
         }
     }
-    body { padding-top: 50px; }
-
     /* Keep pointer with scroll links */
     .nav-link, .navbar-brand {
         cursor: pointer;
@@ -44,7 +47,7 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="navbar">
         <div class="container">
             <div class="container d-flex justify-content-between">
                 <a class="navbar-brand" onclick="scrollToId('About');">Aidan Bowers</a>
@@ -97,8 +100,8 @@
 
 
 <main role="main">
-
-    <div class="jumbotron jumbotron-fluid" id="About">
+    <div class="section-link" id="About">
+    <div class="jumbotron jumbotron-fluid section-link" id="About">
         <div class="container">
             <h1 class="display-4">Aidan Bowers</h1>
             <p class="lead">BASc Candadate, Systems Design Engineering, University of Waterloo</p>
@@ -109,11 +112,12 @@
                 Through my experiences developing software I have picked up some experience with 
                 PHP, MySQL, Javascript/JQuery, Unity Game Engine, Node.js, MongoDB, C++, Python, Arduino and more!
             </p>
-            <a href="#">Resume</a>
+            <a href="#" class="text-decoration-none"><i style="width: 1em; height: 1em;" data-feather="file-text"></i> Resume</a>
         </div>
     </div>
-
-    <div class="album py-5 bg-light"  id="Projects">
+</div>
+<div class="section-link" id="Projects">
+    <div class="album py-5 bg-light section-link" id="Projects">
         <div class="container">
 
         <div class="row">
@@ -257,7 +261,7 @@
         </div>
         </div>
     </div>
-
+</div>
 </main>
 
 <footer class="text-muted">
@@ -274,6 +278,13 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!-- Feathericons -->
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+    feather.replace()
+</script>
 
-
+<script>
+    document.getElementsByTagName("body")[0].setAttribute("style", "padding-top:"+document.getElementById('navbar').offsetHeight+"px;");
+</script>
 </html>
