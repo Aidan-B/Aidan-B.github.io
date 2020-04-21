@@ -18,80 +18,78 @@
 <div class="container-fluid d-table px-0">
 
     <div class="d-md-table-cell bg-dark navsection">
-        <div class="sticky-top">
-            <header>
-                <!-- top nav, small screens only -->
-                <nav class="d-md-none navbar navbar-expand-sm navbar-dark bg-dark fixed-top" id="navbar">
-                    <div class="container">
-                        <div class="container d-flex justify-content-between">
-                            <a class="navbar-brand" onclick="scrollToId('About');">Aidan Bowers</a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                        </div>
-                        <!-- Navbars with large screens -->
-                        <div class="d-none d-sm-block">
+        <header class="sticky-top">
+            <!-- top nav, small screens only -->
+            <nav class="d-md-none navbar navbar-expand-sm navbar-dark bg-dark fixed-top" id="navbar">
+                <div class="container">
+                    <div class="container d-flex justify-content-between">
+                        <a class="navbar-brand" onclick="scrollToId('About');">Aidan Bowers</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <!-- Navbars with large screens -->
+                    <div class="d-none d-sm-block">
+                        <ul class="navbar-nav justify-content-end">
+                            <li class="nav-item" id="Contact-nav">
+                                <a class="nav-link" onclick="scrollToId('Contact');">Contact</a>
+                            </li>
+                            <li class="nav-item" id="Experience-nav">
+                                <a class="nav-link" onclick="scrollToId('Experience');">Experience</a>
+                            </li>
+                            <li class="nav-item" id="Projects-nav">
+                                <a class="nav-link" onclick="scrollToId('Projects');">Projects</a>
+                            </li>
+                            <li class="nav-item" id="Education-nav">
+                                <a class="nav-link" onclick="scrollToId('Education');">Education</a>
+                            </li>                    
+                        </ul>
+                    </div>
+                    <!-- Navbars with small screens -->
+                    <div class="collapse d-sm-none" id="navbar-collapse">
+                        <div class="container">
                             <ul class="navbar-nav justify-content-end">
                                 <li class="nav-item" id="Contact-nav">
-                                    <a class="nav-link" onclick="scrollToId('Contact');">Contact</a>
+                                    <a class="nav-link" data-toggle="collapse" data-target="#navbar-collapse" onclick="scrollToId('Contact');">Contact</a>
                                 </li>
                                 <li class="nav-item" id="Experience-nav">
-                                    <a class="nav-link" onclick="scrollToId('Experience');">Experience</a>
+                                    <a class="nav-link" data-toggle="collapse" data-target="#navbar-collapse" onclick="scrollToId('Experience');">Experience</a>
                                 </li>
                                 <li class="nav-item" id="Projects-nav">
-                                    <a class="nav-link" onclick="scrollToId('Projects');">Projects</a>
+                                    <a class="nav-link" data-toggle="collapse" data-target="#navbar-collapse" onclick="scrollToId('Projects');">Projects</a>
                                 </li>
                                 <li class="nav-item" id="Education-nav">
-                                    <a class="nav-link" onclick="scrollToId('Education');">Education</a>
-                                </li>                    
+                                    <a class="nav-link" data-toggle="collapse" data-target="#navbar-collapse" onclick="scrollToId('Education');">Education</a>
+                                </li>
                             </ul>
                         </div>
-                        <!-- Navbars with small screens -->
-                        <div class="collapse d-sm-none" id="navbar-collapse">
-                            <div class="container">
-                                <ul class="navbar-nav justify-content-end">
-                                    <li class="nav-item" id="Contact-nav">
-                                        <a class="nav-link" data-toggle="collapse" data-target="#navbar-collapse" onclick="scrollToId('Contact');">Contact</a>
-                                    </li>
-                                    <li class="nav-item" id="Experience-nav">
-                                        <a class="nav-link" data-toggle="collapse" data-target="#navbar-collapse" onclick="scrollToId('Experience');">Experience</a>
-                                    </li>
-                                    <li class="nav-item" id="Projects-nav">
-                                        <a class="nav-link" data-toggle="collapse" data-target="#navbar-collapse" onclick="scrollToId('Projects');">Projects</a>
-                                    </li>
-                                    <li class="nav-item" id="Education-nav">
-                                        <a class="nav-link" data-toggle="collapse" data-target="#navbar-collapse" onclick="scrollToId('Education');">Education</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
-                </nav>
+                </div>
+            </nav>
 
-                <!-- side nav, larger screens -->
-                <nav class="container d-none d-md-block navbar-dark bg-dark" id="sidebar">
+            <!-- side nav, larger screens -->
+            <nav class="container d-none d-md-block navbar-dark bg-dark" id="sidebar">
+                
+                <ul class="navbar-nav justify-content-end">
                     
-                    <ul class="navbar-nav justify-content-end">
-                        
-                        <li class="nav-item" id="Contact-nav">
-                            <a class="navbar-brand" onclick="scrollToId('About');">Aidan Bowers</a>
-                        </li>
-                        <li class="nav-item" id="Contact-nav">
-                            <a class="nav-link" onclick="scrollToId('Contact');">Contact</a>
-                        </li>
-                        <li class="nav-item" id="Experience-nav">
-                            <a class="nav-link" onclick="scrollToId('Experience');">Experience</a>
-                        </li>
-                        <li class="nav-item" id="Projects-nav">
-                            <a class="nav-link" onclick="scrollToId('Projects');">Projects</a>
-                        </li>
-                        <li class="nav-item" id="Education-nav">
-                            <a class="nav-link" onclick="scrollToId('Education');">Education</a>
-                        </li>                    
-                    </ul>
-                </nav>
-            </header> 
-        </div>
+                    <li class="nav-item" id="Contact-nav">
+                        <a class="navbar-brand" onclick="scrollToId('About');">Aidan Bowers</a>
+                    </li>
+                    <li class="nav-item" id="Contact-nav">
+                        <a class="nav-link" onclick="scrollToId('Contact');">Contact</a>
+                    </li>
+                    <li class="nav-item" id="Experience-nav">
+                        <a class="nav-link" onclick="scrollToId('Experience');">Experience</a>
+                    </li>
+                    <li class="nav-item" id="Projects-nav">
+                        <a class="nav-link" onclick="scrollToId('Projects');">Projects</a>
+                    </li>
+                    <li class="nav-item" id="Education-nav">
+                        <a class="nav-link" onclick="scrollToId('Education');">Education</a>
+                    </li>                    
+                </ul>
+            </nav>
+        </header> 
     </div>
     <div class="px-0 d-md-table-cell">
         <!-- About -->
@@ -209,7 +207,7 @@
                 
                     <h2>Projects</h2>
                     <div class="row">
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-6 col-md-6">
                             <div class="card mb-4 shadow-sm">
                                 <img class="card-img-top py-0" src="img/HonestyMatters/HonestyMatters-Cover.jpg" data-toggle="modal" data-target="#HonestyMattersModal">
                                 <div class="card-body">
@@ -232,7 +230,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-6 col-md-6">
                             <div class="card mb-4 shadow-sm">
                                 <img class="card-img-top py-0" src="img/RAV/RAV-Cover.jpg" data-toggle="modal" data-target="#RAVModal">
                                 <div class="card-body">
