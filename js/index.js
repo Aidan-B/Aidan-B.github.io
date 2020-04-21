@@ -1,6 +1,6 @@
 function scrollToId(id) {    
     window.scrollTo({
-        top: document.getElementById(id).offsetTop - navHeight,
+        top: document.getElementById(id).offsetTop - document.getElementById('navbar').offsetHeight,
         left: 0,
         behavior: 'smooth'
     });
@@ -12,7 +12,8 @@ document.onscroll = (event) => {
     let sections = document.getElementsByClassName("section-link");
 
     for (let element of sections) {
-        if (element.offsetHeight + element.offsetTop - navHeight > position) { //just saying if we have not passed the section yet
+        //have we passed the section yet?
+        if (element.offsetHeight + element.offsetTop - document.getElementById('navbar').offsetHeight > position) { 
             let navLinks = document.getElementsByClassName('nav-item');
             for (let link of navLinks) {
                 if (link.id == element.id+"-nav"){
@@ -27,6 +28,11 @@ document.onscroll = (event) => {
     }
 }
 
-//Account for height of navbar
-const navHeight = document.getElementById('navbar').offsetHeight;
-document.getElementsByTagName("body")[0].setAttribute("style", "padding-top:"+navHeight+"px;");
+for (let element of document.getElementsByClassName('contact-card')) {
+    element.addEventListener("mouseover", () => {
+        element.classList.add("shadow");
+    });
+    element.addEventListener("mouseout", () => {
+        element.classList.remove("shadow");
+    });
+}
