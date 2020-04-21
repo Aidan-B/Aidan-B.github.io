@@ -1,11 +1,11 @@
 /* Center thubnails */
 .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 @media (min-width: 768px) {
@@ -16,12 +16,11 @@
 
 /* Keep pointer with JS scrolling links */
 .nav-link, .navbar-brand, .scroll-link {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.carousel-control-circle
-  {
-    border-radius: 50%;
-    width: 2em;
-    height: 2em; 
-  }
+.carousel-control-circle {
+  border-radius: 50%;
+  width: 2em;
+  height: 2em; 
+}
