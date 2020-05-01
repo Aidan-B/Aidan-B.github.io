@@ -39,6 +39,7 @@ body {
   position: relative;
 }
 
+/* Navitem / icon fade */
 .icon {
   position: relative;
   /* Adjust these values accordingly */
@@ -51,16 +52,15 @@ body {
   -o-transition: opacity 0.25s; /* Opera < 12.1 */
   transition: opacity 0.25s;
 }
-
 .icon-label {
   position: absolute;
   left: 50%;
   opacity: 0;
   
-  -webkit-transition: opacity 0.25s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-transition: opacity 0.25s; /* Firefox < 16 */
-  -ms-transition: opacity 0.25s; /* Internet Explorer */
-  -o-transition: opacity 0.25s; /* Opera < 12.1 */
+  -webkit-transition: opacity 0.25s;
+  -moz-transition: opacity 0.25s;
+  -ms-transition: opacity 0.25s;
+  -o-transition: opacity 0.25s;
   transition: opacity 0.25s;
 }
 .icon-label > .center {
@@ -68,21 +68,20 @@ body {
   left: -50%;
   opacity: 1.0;
 }
-
 .nav-link:hover .icon{
   opacity: 0;
-  -webkit-transition: opacity 0.25s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-transition: opacity 0.25s; /* Firefox < 16 */
-  -ms-transition: opacity 0.25s; /* Internet Explorer */
-  -o-transition: opacity 0.25s; /* Opera < 12.1 */
+  -webkit-transition: opacity 0.25s; 
+  -moz-transition: opacity 0.25s; 
+  -ms-transition: opacity 0.25s; 
+  -o-transition: opacity 0.25s; 
   transition: opacity 0.25s;
 }
 .nav-link:hover .icon-label{
   visibility: visible;
   opacity: 1.0;
-  -webkit-transition: opacity 0.25s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-transition: opacity 0.25s; /* Firefox < 16 */
-  -ms-transition: opacity 0.25s; /* Internet Explorer */
-  -o-transition: opacity 0.25s; /* Opera < 12.1 */
+  -webkit-transition: opacity 0.25s;
+  -moz-transition: opacity 0.25s;
+  -ms-transition: opacity 0.25s;
+  -o-transition: opacity 0.25s;
   transition: opacity 0.25s;
 }
