@@ -28,38 +28,62 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
-                    <!-- Navbars with large screens -->
+                    <!-- Navbars with med screens -->
                     <div class="d-none d-sm-block">
                         <ul class="navbar-nav justify-content-end">
                             <li class="nav-item" id="Contact-nav">
-                                <a class="nav-link" onclick="scrollToId('Contact');">Contact</a>
+                                <a class="nav-link" onclick="scrollToId('Contact');">
+                                    <span class="icon"><i style="width: 2em; height: 2em;" data-feather="mail"></i></span>
+                                    <span class="icon-label"><span class="center">Contact</span></span>
+                                </a>
                             </li>
                             <li class="nav-item" id="Experience-nav">
-                                <a class="nav-link" onclick="scrollToId('Experience');">Experience</a>
+                                <a class="nav-link" onclick="scrollToId('Experience');">
+                                    <span class="icon"><i style="width: 2em; height: 2em;" data-feather="briefcase"></i></span>
+                                    <span class="icon-label"><span class="center">Experience</span></span>
+                                </a>
                             </li>
                             <li class="nav-item" id="Projects-nav">
-                                <a class="nav-link" onclick="scrollToId('Projects');">Projects</a>
+                                <a class="nav-link" onclick="scrollToId('Projects');">
+                                    <span class="icon"><i style="width: 2em; height: 2em;" data-feather="tool"></i></span>
+                                    <span class="icon-label"><span class="center">Projects</span></span>
+                                </a>
                             </li>
                             <li class="nav-item" id="Education-nav">
-                                <a class="nav-link" onclick="scrollToId('Education');">Education</a>
-                            </li>                    
+                                <a class="nav-link" onclick="scrollToId('Education');">
+                                    <span class="icon"><i style="width: 2em; height: 2em;" data-feather="book-open"></i></span>
+                                    <span class="icon-label"><span class="center">Education</span></span>
+                                </a>
+                            </li>                   
                         </ul>
                     </div>
                     <!-- Navbars with small screens -->
-                    <div class="collapse d-sm-none" id="navbar-collapse">
+                    <div class="collapse d-sm-none full-width" id="navbar-collapse">
                         <div class="container">
-                            <ul class="navbar-nav justify-content-end">
+                            <ul class="navbar-nav d-flex flex-row justify-content-between full-width">
                                 <li class="nav-item" id="Contact-nav">
-                                    <a class="nav-link" data-toggle="collapse" data-target="#navbar-collapse" onclick="scrollToId('Contact');">Contact</a>
+                                    <a class="nav-link" data-toggle="collapse" data-target="#navbar-collapse" onclick="scrollToId('Contact');">
+                                        <span class="icon"><i style="width: 2em; height: 2em;" data-feather="mail"></i></span>
+                                        <span class="icon-label"><span class="center">Contact</span></span>
+                                    </a>
                                 </li>
                                 <li class="nav-item" id="Experience-nav">
-                                    <a class="nav-link" data-toggle="collapse" data-target="#navbar-collapse" onclick="scrollToId('Experience');">Experience</a>
+                                    <a class="nav-link" data-toggle="collapse" data-target="#navbar-collapse" onclick="scrollToId('Experience');">
+                                        <span class="icon"><i style="width: 2em; height: 2em;" data-feather="briefcase"></i></span>
+                                        <span class="icon-label"><span class="center">Experience</span></span>
+                                    </a>
                                 </li>
                                 <li class="nav-item" id="Projects-nav">
-                                    <a class="nav-link" data-toggle="collapse" data-target="#navbar-collapse" onclick="scrollToId('Projects');">Projects</a>
+                                    <a class="nav-link" data-toggle="collapse" data-target="#navbar-collapse" onclick="scrollToId('Projects');">
+                                        <span class="icon"><i style="width: 2em; height: 2em;" data-feather="tool"></i></span>
+                                        <span class="icon-label"><span class="center">Projects</span></span>
+                                    </a>
                                 </li>
                                 <li class="nav-item" id="Education-nav">
-                                    <a class="nav-link" data-toggle="collapse" data-target="#navbar-collapse" onclick="scrollToId('Education');">Education</a>
+                                    <a class="nav-link" data-toggle="collapse" data-target="#navbar-collapse" onclick="scrollToId('Education');">
+                                        <span class="icon"><i style="width: 2em; height: 2em;" data-feather="book-open"></i></span>
+                                        <span class="icon-label"><span class="center">Education</span></span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -67,27 +91,43 @@
                 </div>
             </nav>
 
-            <!-- side nav, larger screens -->
+            <!-- side nav, large screens -->
             <nav class="container d-none d-md-block navbar-dark bg-dark" id="sidebar">
-                
-                <ul class="navbar-nav justify-content-end">
-                    
-                    <li class="nav-item" id="Contact-nav">
-                        <a class="navbar-brand" onclick="scrollToId('About');">Aidan Bowers</a>
-                    </li>
-                    <li class="nav-item" id="Contact-nav">
-                        <a class="nav-link" onclick="scrollToId('Contact');">Contact</a>
-                    </li>
-                    <li class="nav-item" id="Experience-nav">
-                        <a class="nav-link" onclick="scrollToId('Experience');">Experience</a>
-                    </li>
-                    <li class="nav-item" id="Projects-nav">
-                        <a class="nav-link" onclick="scrollToId('Projects');">Projects</a>
-                    </li>
-                    <li class="nav-item" id="Education-nav">
-                        <a class="nav-link" onclick="scrollToId('Education');">Education</a>
-                    </li>                    
-                </ul>
+                <div class="left-nav">
+                    <ul class="navbar-nav text-center">
+                        
+                        <li class="nav-item py-1" id="About-nav">
+                            <a class="nav-link" onclick="scrollToId('About');">
+                                <span class="icon"><i style="width: 2em; height: 2em;" data-feather="home"></i></span>
+                                <span class="icon-label"><span class="center">Aidan Bowers</span></span>
+                            </a>
+                        </li>
+                        <li class="nav-item py-1" id="Contact-nav">
+                            <a class="nav-link" onclick="scrollToId('Contact');">
+                                <span class="icon"><i style="width: 2em; height: 2em;" data-feather="mail"></i></span>
+                                <span class="icon-label"><span class="center">Contact</span></span>
+                            </a>
+                        </li>
+                        <li class="nav-item py-1" id="Experience-nav">
+                            <a class="nav-link" onclick="scrollToId('Experience');">
+                                <span class="icon"><i style="width: 2em; height: 2em;" data-feather="briefcase"></i></span>
+                                <span class="icon-label"><span class="center">Experience</span></span>
+                            </a>
+                        </li>
+                        <li class="nav-item py-1" id="Projects-nav">
+                            <a class="nav-link" onclick="scrollToId('Projects');">
+                                <span class="icon"><i style="width: 2em; height: 2em;" data-feather="tool"></i></span>
+                                <span class="icon-label"><span class="center">Projects</span></span>
+                            </a>
+                        </li>
+                        <li class="nav-item py-1" id="Education-nav">
+                            <a class="nav-link" onclick="scrollToId('Education');">
+                                <span class="icon"><i style="width: 2em; height: 2em;" data-feather="book-open"></i></span>
+                                <span class="icon-label"><span class="center">Education</span></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </header> 
     </div>

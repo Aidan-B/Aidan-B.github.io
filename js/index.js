@@ -6,8 +6,7 @@ function scrollToId(id) {
     });
 }
 
-//Calculate "active" class on nav links
-document.onscroll = (event) => {
+function updateNavHighlight() {
     let position = document.getElementsByTagName("html")[0].scrollTop;
     let sections = document.getElementsByClassName("section-link");
 
@@ -27,6 +26,12 @@ document.onscroll = (event) => {
         }
     }
 }
+
+//Calculate "active" class on nav links
+document.onscroll = (event) => {
+    updateNavHighlight()
+}
+document.onload(updateNavHighlight())
 
 for (let element of document.getElementsByClassName('contact-card')) {
     element.addEventListener("mouseover", () => {
