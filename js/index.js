@@ -12,7 +12,7 @@ function updateNavHighlight() {
 
     for (let element of sections) {
         //have we passed the section yet?
-        if (element.offsetHeight + element.offsetTop - document.getElementById('navbar').offsetHeight > position) { 
+        if (element.offsetHeight + element.offsetTop - document.getElementById('navbar').offsetHeight - (window.innerHeight / 3) > position) { 
             let navLinks = document.getElementsByClassName('nav-item');
             for (let link of navLinks) {
                 if (link.id == element.id+"-nav"){
