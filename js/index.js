@@ -6,6 +6,7 @@ function scrollToId(id) {
     });
 }
 
+//TODO: there is a bug that means the contact item doesn't get the correct colouring updates.
 function updateNavHighlight() {
     let position = document.getElementsByTagName("html")[0].scrollTop;
     let sections = document.getElementsByClassName("section-link");
@@ -31,13 +32,50 @@ function updateNavHighlight() {
 document.onscroll = (event) => {
     updateNavHighlight()
 }
-document.onload(updateNavHighlight())
 
-for (let element of document.getElementsByClassName('contact-card')) {
-    element.addEventListener("mouseover", () => {
-        element.classList.add("shadow");
-    });
-    element.addEventListener("mouseout", () => {
-        element.classList.remove("shadow");
-    });
-}
+window.addEventListener("DOMContentLoaded", function() {
+    
+    let form = document.getElementById('contactForm')
+    form.addEventListener("submit", function(ev) {
+        ev.preventDefault();
+        //TODO: Need to do form validation
+        sendContactEmail(form);
+    });    
+
+    function sendContactEmail(form) {
+        
+        let xhr = new XMLHttpRequest();
+        let url = "https://formspree.io/xaypwzak"
+        let data = new FormData(form)
+        
+        xhr.open("POST", url);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            if (xhr.status === 200) {
+                form.reset();
+                //Might be cool to hide the button on success
+                //TODO: Provide proper user feedback on success/fail
+                //button.style = "display: none ";
+                console.log(xhr.status, xhr.response, xhr.responseType);
+                alert("success");
+            } else {
+                console.log(xhr.status, xhr.response, xhr.responseType);
+                alert("fail, see console for more details");
+            }
+        };
+        console.log(data)
+        xhr.send(data);
+    }
+    updateNavHighlight()
+
+    for (let element of document.getElementsByClassName('contact-card')) {
+        element.addEventListener("mouseover", () => {
+            element.classList.add("shadow");
+        });
+        element.addEventListener("mouseout", () => {
+            element.classList.remove("shadow");
+        });
+    }
+
+});
