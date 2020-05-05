@@ -133,47 +133,44 @@
     </div>
 
     <div class="px-0 d-md-table-cell">
-           
-        <div class="section-link" id="About">
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <div class="row">
-                        <!-- About -->   
-                        <div class="col-lg-8 pb-4">
-                            <h1 class="display-4">Aidan Bowers</h1>
-                            <p class="lead">BASc Candidate, Systems Design Engineering, University of Waterloo</p>
-                            <hr class="my-4">
-                            <p>
-                                A few years ago, I discovered a passion for computing. 
-                                I love of making cool things and with computers I very quickly started learning about more and more cool things I could make. 
-                                Through my experiences developing software I have picked up some experience with 
-                                PHP, MySQL, Javascript/JQuery, Unity Game Engine, Node.js, MongoDB, C++, Python, Arduino and more!
-                            </p>
-                            <a href="resources/Aidan Bowers Resume.pdf" class="text-decoration-none"><i style="width: 1em; height: 1em;" data-feather="file-text"></i> Resume</a>
-                        </div>
-                        <!-- Contact -->
-                        <div class="section-link col-lg-4 justify-content-end" id="Contact">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h2 class="card-title">Contact</h2>
-                                    <form id="contactForm">
-                                        <div class="row">
-                                            <div class="col col-lg-12 col-md-6 col-12">
-                                                <label for="email" class="">Email:</label>
-                                                <input type="email" class="form-control" id="email" placeholder="name@example.com" name="_replyto">
-                                            </div>
-                                            <div class="col col-lg-12 col-md-6 col-12">
-                                                <label for="subject" class="">Subject:</label>
-                                                <input type="text" class="form-control" id="subject" placeholder="Neat website!" name="_subject">
-                                            </div>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="row">
+                    <!-- About -->   
+                    <div class="section-link col-lg-8 pb-4" id="About">
+                        <h1 class="display-4">Aidan Bowers</h1>
+                        <p class="lead">BASc Candidate, Systems Design Engineering, University of Waterloo</p>
+                        <hr class="my-4">
+                        <p>
+                            A few years ago, I discovered a passion for computing. 
+                            I love of making cool things and with computers I very quickly started learning about more and more cool things I could make. 
+                            Through my experiences developing software I have picked up some experience with 
+                            PHP, MySQL, Javascript/JQuery, Unity Game Engine, Node.js, MongoDB, C++, Python, Arduino and more!
+                        </p>
+                        <a href="resources/Aidan Bowers Resume.pdf" class="text-decoration-none"><i style="width: 1em; height: 1em;" data-feather="file-text"></i> Resume</a>
+                    </div>
+                    <!-- Contact -->
+                    <div class="section-link col-lg-4 justify-content-end" id="Contact">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 class="card-title">Contact</h2>
+                                <form id="contactForm">
+                                    <div class="row">
+                                        <div class="col col-lg-12 col-md-6 col-12">
+                                            <label for="email" class="">Email:</label>
+                                            <input type="email" class="form-control" id="email" placeholder="name@example.com" name="_replyto">
                                         </div>
+                                        <div class="col col-lg-12 col-md-6 col-12">
+                                            <label for="subject" class="">Subject:</label>
+                                            <input type="text" class="form-control" id="subject" placeholder="Neat website!" name="_subject">
+                                        </div>
+                                    </div>
 
-                                        <label for="message" class="">Message:</label>
-                                        <textarea class="form-control" id="message" rows="3"  placeholder="You can put anything you want here! I would be thrilled to hear from you!" name="message"></textarea>
-                                        
-                                        <button type="submit" class="btn btn-primary my-1" onclick=";"><i style="width: 1em; height: 1em;" data-feather="send"></i> Send</button>
-                                    </form>
-                                </div>
+                                    <label for="message" class="">Message:</label>
+                                    <textarea class="form-control" id="message" rows="3"  placeholder="You can put anything you want here! I would be thrilled to hear from you!" name="message"></textarea>
+                                    
+                                    <button type="submit" class="btn btn-primary my-1" onclick=";"><i style="width: 1em; height: 1em;" data-feather="send"></i> Send</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -439,6 +436,35 @@
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Open Website</button>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center align-items-center full-width fixed-top pt-5">
+    <div class="toast" id="successToast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="10000">
+        <div class="toast-header">
+            <strong class="mr-auto">Success</strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            Thanks for sending me a message!<br/>
+            I will get in touch as soon as possible!
+        </div>
+    </div>
+</div>
+<div class="d-flex justify-content-center align-items-center full-width fixed-top pt-5">
+    <div class="toast" id="failToast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+        <div class="toast-header">
+            <strong class="mr-auto">Failed to submit</strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            <p>There was an error sending the message. Hopefully the below error message can help troubleshoot the issue:</p>
+            <textarea class="form-control" id="errorMessage" readonly>Error: Unknown</textarea>
         </div>
     </div>
 </div>

@@ -6,7 +6,7 @@ function scrollToId(id) {
     });
 }
 
-//TODO: there is a bug that means the contact item doesn't get the correct colouring updates.
+//TODO: turns out there is a thing called a scrollspy. If I have time I might update this in the future
 function updateNavHighlight() {
     let position = document.getElementsByTagName("html")[0].scrollTop;
     let sections = document.getElementsByClassName("section-link");
@@ -34,7 +34,7 @@ document.onscroll = (event) => {
 }
 
 window.addEventListener("DOMContentLoaded", function() {
-    
+
     let form = document.getElementById('contactForm')
     form.addEventListener("submit", function(ev) {
         ev.preventDefault();
@@ -54,14 +54,12 @@ window.addEventListener("DOMContentLoaded", function() {
             if (xhr.readyState !== XMLHttpRequest.DONE) return;
             if (xhr.status === 200) {
                 form.reset();
+                $('#successToast').toast('show')
                 //Might be cool to hide the button on success
                 //TODO: Provide proper user feedback on success/fail
-                //button.style = "display: none ";
-                console.log(xhr.status, xhr.response, xhr.responseType);
-                alert("success");
             } else {
-                console.log(xhr.status, xhr.response, xhr.responseType);
-                alert("fail, see console for more details");
+                $('#failToast').toast('show');
+                $('#errorMessage').html(xhr.response);
             }
         };
         console.log(data)
