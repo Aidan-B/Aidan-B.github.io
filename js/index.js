@@ -7,6 +7,8 @@ function scrollToId(id) {
 }
 
 //TODO: turns out there is a thing called a scrollspy. If I have time I might update this in the future
+// Might also be interesting to use the position of the cursor in addition to the scroll position of 
+// the page
 function updateNavHighlight() {
     let position = document.getElementsByTagName("html")[0].scrollTop;
     let sections = document.getElementsByClassName("section-link");

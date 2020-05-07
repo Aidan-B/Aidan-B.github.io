@@ -137,7 +137,7 @@
             <div class="container">
                 <div class="row">
                     <!-- About -->   
-                    <div class="section-link col-lg-8 pb-4" id="About">
+                    <div class="section-link col-lg-7 pb-4" id="About">
                         <h1 class="display-4">Aidan Bowers</h1>
                         <p class="lead">BASc Candidate, Systems Design Engineering, University of Waterloo</p>
                         <hr class="my-4">
@@ -146,29 +146,39 @@
                             I love of making cool things and with computers I very quickly started learning about more and more cool things I could make. 
                             Through my experiences developing software I have picked up some experience with 
                             PHP, MySQL, Javascript/JQuery, Unity Game Engine, Node.js, MongoDB, C++, Python, Arduino and more!
+                        </p><p>
+                            If you are interested in aything you see here, feel free to contact me!
                         </p>
                         <a href="resources/Aidan Bowers Resume.pdf" class="text-decoration-none"><i style="width: 1em; height: 1em;" data-feather="file-text"></i> Resume</a>
                     </div>
                     <!-- Contact -->
-                    <div class="section-link col-lg-4 justify-content-end" id="Contact">
+                    <div class="section-link col-lg-5 justify-content-end" id="Contact">
                         <div class="card">
                             <div class="card-body">
                                 <h2 class="card-title">Contact</h2>
                                 <form id="contactForm">
                                     <div class="row">
                                         <div class="col col-lg-12 col-md-6 col-12">
-                                            <label for="email" class="">Email:</label>
-                                            <input type="email" class="form-control" id="email" placeholder="name@example.com" name="_replyto">
+                                            <div class="py-1">
+                                                <label for="email">Email:</label>
+                                                <input type="email" class="form-control" id="email" placeholder="name@example.com" name="_replyto">
+                                            </div>
                                         </div>
                                         <div class="col col-lg-12 col-md-6 col-12">
-                                            <label for="subject" class="">Subject:</label>
-                                            <input type="text" class="form-control" id="subject" placeholder="Neat website!" name="_subject">
+                                            <div class="py-1">
+                                                <label for="subject">Name:</label>
+                                                <input type="text" class="form-control" id="subject" placeholder="Name" name="name">
+                                            </div>
                                         </div>
                                     </div>
-
-                                    <label for="message" class="">Message:</label>
-                                    <textarea class="form-control" id="message" rows="3"  placeholder="You can put anything you want here! I would be thrilled to hear from you!" name="message"></textarea>
-                                    
+                                    <div class="py-1">
+                                        <label for="subject">Subject:</label>
+                                        <input type="text" class="form-control" id="subject" placeholder="Neat website!" name="_subject">
+                                    </div>
+                                    <div class="py-1">
+                                        <label for="message">Message:</label>
+                                        <textarea class="form-control" id="message" rows="3"  placeholder="You can put anything you want here! I would be thrilled to hear from you!" name="message"></textarea>
+                                    </div>
                                     <button type="submit" class="btn btn-primary my-1" onclick=";"><i style="width: 1em; height: 1em;" data-feather="send"></i> Send</button>
                                 </form>
                             </div>
@@ -181,7 +191,7 @@
         <!-- Experience -->
         <div class="section-link py-5" id="Experience">
             <div class="container">
-
+                <!-- TODO: add gamejam -->
                 <h2>Experience</h2>
                 <div class="row">
                     <div class="col-xl-6 py-1">
