@@ -56,12 +56,23 @@ window.addEventListener("DOMContentLoaded", function() {
             if (xhr.readyState !== XMLHttpRequest.DONE) return;
             if (xhr.status === 200) {
                 form.reset();
-                $('#successToast').toast('show')
+                let successToast = $('#successToast')
+                successToast.parent().addClass('d-flex').removeClass('d-none') //Alignment hack
+                successToast.toast('show')
+                successToast.on('hidden.bs.toast', function() {
+                    successToast.parent().addClass('d-none').removeClass('d-flex')
+                });
                 //Might be cool to hide the button on success
                 //TODO: Provide proper user feedback on success/fail
-            } else {
-                $('#failToast').toast('show');
+            } else {                
+                let failToast = $('#failToast');
+                failToast.parent().addClass('d-flex').removeClass('d-none'); //Alignment hack
+                failToast.toast('show');
                 $('#errorMessage').html(xhr.response);
+                
+                failToast.on('hidden.bs.toast', function() {
+                    failToast.parent().addClass('d-none').removeClass('d-flex')
+                });
             }
         };
         console.log(data)
