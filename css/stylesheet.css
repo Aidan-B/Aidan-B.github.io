@@ -37,6 +37,12 @@ body {
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
 }
+.social-nav-links {
+  position: absolute;
+  top: 100vh;
+  left: 50%;
+  transform: translateY(-100%) translateX(-50%);
+}
 
 .nav-link {
   position: relative;
