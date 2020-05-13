@@ -503,9 +503,9 @@
 <div class="modal fade" id="HonestyMattersModal" tabindex="-1" role="dialog" aria-labelledby="HonestyMattersModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="d-flex align-items-center justify-content-between p-2">
                 <h3 class="modal-title" id="HonestyMattersModalTitle">Honesty Matters</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close p-2" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -535,15 +535,52 @@
                         </span>
                     </a>
                   </div>
-                <div class="p-2">
+                <div class="container pt-3">
+                    <h2>About</h2>
                     <p>
-                        The Text goes here The Text goes here The Text goes here
+                        This project was my team's submission to Hack the North. Hack the North was the first Hackathon in
+                        which I participated. The event was lots of fun, and has inspired me to participate in multiple hackathons since.
+                        below is an excerpt from the event submission page.
                     </p>
+                    <div class="container bg-light">
+                        <h4>Inspiration</h4>
+                        <p>
+                            Finding reliable and credible news sources has become an increasingly more difficult task to accomplish.
+                            Being able to judge whether a news article is honest is often overlooked, especially when the headlines 
+                            of articles are written less for accuracy, and more to attract clicks.
+                        </p>    
+                           
+                        <h4>What it does</h4>
+                        <p>
+                            This web application displays a figure from 0-100 on a red-green sliding scale beside the headline of 
+                            every news article from a google news search. This is done to give a quantifiable measure of reliability
+                            and credibility of news articles, allowing users to compare articles to obtain only the most honest sources
+                            of information. Users can also provide their own ratings as feedback for the community based on their
+                            perception of an article's reliability.
+                        </p>
+                            
+                        <h4>How we built it</h4>
+                        <p>
+                            First, we web-scraped Google News for news articles and processed the information using Google's Cloud's
+                            app engine. Each news article found was then scraped and judged for honesty/reliability against the following criteria:
+                            <ul>
+                                <li>Presence of quotations</li>
+                                <li>Presence of opinionated terms such as "I think"</li>
+                                <li>Referencing of image captions</li>
+                                <li>Embedded video links if references to videos are present</li>
+                                <li>Site reliability (taken from average scores of articles from the same news source)</li>
+                                <li>Author reliability (taken from average scores from the same author)</li>
+                            </ul>
+                            Each criteria above contributes to a weighted mean and results in an overall honesty rating of the news article.
+                            Each rating is saved into Google Firebase, to reduce the amount of times scraping needs to be done for a unique article in the web app.
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Open Website</button>
+                <a type="button" class="btn btn-primary text-light" href="https://devpost.com/software/honestymatters-hylaij">Open Website</a>
+                <a type="button" class="btn btn-primary text-light" href="https://github.com/AdamCarnaffan/ericius_aurantiaco">View on Github</a>
             </div>
         </div>
     </div>
@@ -551,9 +588,9 @@
 <div class="modal fade" id="RAVModal" tabindex="-1" role="dialog" aria-labelledby="RAVModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="d-flex align-items-center justify-content-between p-2">
                 <h3 class="modal-title" id="RAVModalTitle">The RAV Project</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close p-2" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -582,16 +619,38 @@
                             <span class="sr-only">Next</span>
                         </span>
                     </a>
-                  </div>
-                <div class="p-2">
+                </div>
+                <div class="container pt-3">
+                    <h2>About</h2>
                     <p>
-                        The Text goes here The Text goes here The Text goes here
+                        This project was completed through the senior years of highschool. Myself and 
+                        <a href="https://adamcarnaffan.github.io/">Adam Carnaffan</a> worked to develop a quadcopter
+                        from scratch, starting with no prior knowledge. Through the project I worked to model & 3D print
+                        the frame of the drone, performed extensive research on parts and their compatibility, and
+                        developed software to control the drone through a Raspberry PI. The website has lots of cool
+                        info and videos of the project as it progressed. Below is one post taken from the site:
                     </p>
+                    <div class="container bg-light">
+                        <h4>IT FLIES (FOR REAL!)</h4>
+                        <p>
+                            We really can't even believe it!  1 full year of development later, after hours of building, breaking,
+                            coding and tears of much joy (and many times, tears of much frustration), it actually flies as it should.
+                            You have to check it out to believe it.  We are piloting the RAV using a laptop keyboard, but plan to move
+                            toward an XBox controller for piloting shortly.  
+                        </p>
+                        <p>
+                            The two videos on the right are significant because they represent the first time we've actually 'piloted'
+                            the RAV.  In the top-most video, you simply see it being flown about the room, but in the bottom video you
+                            can see the values being sent from the RAV to the laptop (yellow bars represent each motor, and the
+                            horizontal bars indicate roll, pitch, yaw, throttle and AUX values).
+                        </p>    
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Open Website</button>
+                <a type="button" class="btn btn-primary text-light" href="https://sites.google.com/ddsb.ca/the-rav-project/home">Open Website</a>
+                <a type="button" class="btn btn-primary text-light" href="https://github.com/Aidan-B/RaspPiDrone">View on Github</a>
             </div>
         </div>
     </div>
@@ -599,9 +658,9 @@
 <div class="modal fade" id="gauntletOfTimeModal" tabindex="-1" role="dialog" aria-labelledby="gauntletOfTimeModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="d-flex align-items-center justify-content-between p-2">
                 <h3 class="modal-title" id="gauntletOfTimeModalTitle">Gauntlet of Time</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close p-2" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -612,16 +671,29 @@
                             <img src="./img/Gauntlet of Time/GauntletOfTime.jpg" class="d-block w-100" alt="Gauntlet of Time">
                         </div>
                     </div>
-                  </div>
-                <div class="p-2">
+                </div>
+                <div class="container pt-3">
+                    <h2>About</h2>
                     <p>
-                        The Text goes here The Text goes here The Text goes here
+                        Gauntlet of Time is <a href="https://github.com/silkyrie">Luke Richards'</a> and my submission to the TV game jam 2019.
+                        This was the first game jam I participated in, and one of my first experiences using git as a collaborative tool. The game, 
+                        based off of an episode of Doctor Who, was developed using the Unity Game Engine. It features many interesting mechanics 
+                        such as time rewind, procedural maze generation and custom AI pathfinding. In the game you must dodge traps and obstacles 
+                        whilst attempting to find the exit. Past versions of yourself also traverse the maze with you, acting as your lives (if you 
+                        die, you respawn as one of them).There is also a version of yourself from the future that hunts you down.
+                    </p>
+                    <p>
+                        While an interesting concept, the game lacked the polish required to perform well within the jam. Knowing what we know now,
+                        it might be a fun project to revisit, but there are currently no plans to do so. If you are interested (despite the poor UX)
+                        in playing the game, you can download it for Windows on the itch.io site. you could compile for other OS's if you have Unity,
+                        We just ran out of time at the end of the jam to compile for multiple platforms.
                     </p>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Open Website</button>
+                <a type="button" class="btn btn-primary text-light" href="https://itch.io/jam/tvgamejam/rate/370956">Open Website</a>
+                <a type="button" class="btn btn-primary text-light" href="https://github.com/Aidan-B/TV-Game-Jam">View on Github</a>
             </div>
         </div>
     </div>
@@ -629,9 +701,9 @@
 <div class="modal fade" id="discordHackweekModal" tabindex="-1" role="dialog" aria-labelledby="discordHackweekModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="d-flex align-items-center justify-content-between p-2">
                 <h3 class="modal-title" id="discordHackweekModalTitle">TeamUp</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close p-2" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -643,15 +715,23 @@
                         </div>
                     </div>
                   </div>
-                <div class="p-2">
+                <div class="container pt-3">
+                    <h2>About</h2>
                     <p>
-                        The Text goes here The Text goes here The Text goes here
+                        TeamUp is submission to Discord Hackweek 2019. <a href="https://blog.discord.com/discord-community-hack-week-build-and-create-alongside-us-6b2a7b7bba33">Discord hackweek</a>
+                        was a contest to create content (mostly bots) for the discord messaging platform. TeamUp was a submission for the 
+                        Social category. The bot was made to help users schedule times to play games with each other, and join groups to
+                        play at specific times. It provides users with notifications at game time, and makes planning games with friends
+                        in an asynchronous format, or makes finding people interested in playing a game with you easier.
+                    </p>
+                    <p>
+                        If you are interested, feel free to check out the project source code and README on github.
                     </p>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Open Website</button>
+                <a type="button" class="btn btn-primary text-light" href="https://github.com/orizabal/DiscordHackweek-TeamUp">View on Github</a>
             </div>
         </div>
     </div>
